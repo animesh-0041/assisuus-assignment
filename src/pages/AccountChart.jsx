@@ -9,8 +9,8 @@ export default function AccountChart({
   marginRight = 20,
   marginBottom = 50,
   marginLeft = 20,
-  lineColor = "#00E676", // Line color
-  curveType = d3.curveCardinal, // Curve interpolation type
+  lineColor = "#00E676", 
+  curveType = d3.curveCardinal, 
   labelColor = "#BDBDBD"
 }) {
   const x = d3.scaleBand().domain(d3.range(data.length)).range([marginLeft, width - marginRight]).padding(0.1);

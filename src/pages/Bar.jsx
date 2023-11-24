@@ -34,7 +34,7 @@ export default function Bar({
             x={x(i) + x.bandwidth() / 2}
             y={height - marginBottom + 15}
             textAnchor="middle"
-            fill={labelColor} // Set the label color
+            fill={labelColor} 
           >
             {labels[i]}
           </text>
