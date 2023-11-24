@@ -1,8 +1,7 @@
 import * as d3 from "d3";
 
 export default function OverlappingStackedBarChart({
-  data1 = [5, 10, 20, 15, 18, 10],
-  data2 = [8, 12, 15, 10, 13, 8],
+  
   labels = ["August", "September", "October", "November", "December", "January"],
   width = 500,
   height = 230,
@@ -14,8 +13,16 @@ export default function OverlappingStackedBarChart({
   borderRadius = 5,
   color1 = "green",
   color2 = "#00E676",
-  labelColor = "#BDBDBD"
+  labelColor = "#BDBDBD",
+  random
 }) {
+  let data1;
+  let data2;
+  if(random || random==false){
+
+    data1 = [Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 30) + 1]
+    data2 = [Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 30) + 1]
+  }
   const x = d3
     .scaleBand()
     .domain(d3.range(data1.length))
